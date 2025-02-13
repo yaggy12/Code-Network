@@ -1,2 +1,18 @@
+class Graph:
+    def __init__(self, directed=False):
+        """Initialize the graph.:param directed: Boolean to specify if the graph is directed or undirected.
+        """
+        self.directed = directed
+        self.graph = {}
 
-uuwehfh
+    def add_node(self, member):
+        """
+        Adds a node (member) to the graph.
+        :param member: The identifier for the member (is their name or user id).
+        """
+        if member not in self.graph:
+            self.graph[member] = []
+        else:
+            print(f"Node {member} already exists.")
+
+    def add_edge(self, member1, member2
